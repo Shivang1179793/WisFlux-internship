@@ -1,0 +1,10 @@
+const canvas_native = document.querySelector("#native")
+
+const context = canvas_native.getContext("2d")
+context.beginPath()
+context.moveTo(0, 50)
+context.lineTo(50, 0)
+context.lineTo(100, 50)
+context.lineTo(0, 50)
+context.stroke()
+context.closePath()

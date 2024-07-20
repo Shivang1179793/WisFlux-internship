@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage vs Session Storage</title>
+    <style>
+        *, *::before, *::after {
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .information {
+            margin-top: 20px;
+            font-size: 1.4rem;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<h1>Local Storage and Session Storage Demonstration</h1>
+
+<p class="information">
+    The session storage is restricted to ONLY the session itself. That means that as soon as the user closes the tab or
+    opens the website in a new tab, the session changes. Hence, the session ID changes too.
+
+</p>
+<p id="session_stg" class="information"></p>
+<br><br><br>
+<p class="information">
+    The local storage differs a lot from session storage. While the session storage expires as soon as the user closes
+    the current session or tab, the local storage - NEVER EXPIRES.
+    Hence, the value of the local storage will stay the same even when the tab is duplicated.
+</p>
+<p id="local_stg" class="information"></p>
+
+
+</body>
+</html>
