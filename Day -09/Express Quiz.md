@@ -47,10 +47,10 @@
    * Some example JSON is :-
    ```json
    {
-      "name": "Kshipra Jadav",
-      "age": 19,
+      "name": "shivang baranwal",
+      "age": 45,
       "gender": "Male",
-      "programming languages": ["Javascript", "Typescript", "Java"]
+      "programming languages": ["Javascript", "Typescript", "C++"]
    }
    ```
 8. Why we use JSON format for API?
