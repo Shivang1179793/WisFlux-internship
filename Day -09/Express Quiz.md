@@ -65,8 +65,6 @@
     * First, the client sends the request to the server.
     * The server then responds with a response.
     * That response can contain the data requested or an error message if the data is not found.
-    * The HTTP communication is better explained by the following diagram.
-![what-is-http---teachoo](https://user-images.githubusercontent.com/84441419/179136208-f9a57f56-464d-4c73-b4c0-6e32f906ce12.jpg)
 
    
 11. What is Middleware in ExpressJS.
