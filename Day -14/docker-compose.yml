@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+
+  client:
+    build: ./client
+    container_name: visitors_client_c
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./client:/visitor_client
+      - ./visitor_client/node_modules
+    links:
+      - server
+
+  server:
+    build: ./server
+    container_name: visitors_server_c
+    volumes:
+      - ./server:/visitor_server
+      - ./visitor_server/node_modules
+    environment:
+      - plugins.security.disabled=true
+      - discovery.type=single-node
+      - http.port=8000
+      - http.cors.enabled=true
+      - http.cors.allow-origin=http://localhost:3000,http://127.0.0.1:3000
+      - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+      - http.cors.allow-credentials=true
+      - bootstrap.memory_lock=true
+      - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
+    ports:
+      - '8000:8000'
